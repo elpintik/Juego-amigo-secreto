@@ -16,11 +16,12 @@ function agregarAmigo(){
     //nombres de personas
     if(amigoRecibido == "" || !isNaN(amigoRecibido)){
         alert("Ingrese el nombre de un amigo, no se acepta espacios vacíos ni números");
-        document.querySelector('#amigo').value = "";
+        limpiarCaja();
     } else{
         // le digo que me revise si hay un valor con este dato recibido del input
         if(amigosLista.includes(amigoRecibido)){
             asignarTexto('.section-title', 'el nombre del amigo ya esta registrado');
+            limpiarCaja();
         }else{
             //de lo contrario que me agregue en la lista ese nombre porque no lo encontro duplicado.
             amigosLista.push(amigoRecibido);
