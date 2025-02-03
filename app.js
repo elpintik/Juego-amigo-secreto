@@ -21,7 +21,7 @@ function agregarAmigo(){
         // le digo que me revise si hay un valor con este dato recibido del input
         if(amigosLista.includes(amigoRecibido)){
             asignarTexto('.section-title', 'el nombre del amigo ya esta registrado');
-            limpiarCaja();
+            document.querySelector('#amigo').value = "";
         }else{
             //de lo contrario que me agregue en la lista ese nombre porque no lo encontro duplicado.
             amigosLista.push(amigoRecibido);
